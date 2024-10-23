@@ -9,7 +9,6 @@ packages = [{include = "init_projects"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 
-
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
 commitizen = "^3.29.1"
