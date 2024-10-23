@@ -11,3 +11,6 @@ pre-commit:
 
 commit:
 	@cz commit
+
+jupyter:
+	@poetry run jupyter-lab
