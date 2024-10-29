@@ -13,7 +13,7 @@
         - Underscores can be used if it improves readability.
         - Examples:
             - `tests/`
-            - `utils/`
+            - `audio_processing/`
             - `model_training.py`
 
     - Package directory:
@@ -60,54 +60,58 @@
 
     - All-uppercase.
     - Underscores can be used if it improves readability.
+      - Examples:
+        - AUDIO_FILE_PATH: str = "/path/to/file.wav"
+        - TEMPERATURE: float = 0.5
+        - SPEED_LIGHT: float = 300000
 
-- Bitbucket/Git branch names:
+## Bitbucket/Git branch names:
 
-    - Code flow branches
-        - Development: `dev`
-        - QA/Test: `test`
-        - Staging: `staging` (Optional)
-        - Master: `master`
+- Code flow branches
+    - Development: `dev/develop`
+    - QA/Test: `test`
+    - Staging: `staging` (Optional)
+    - Master: `master`
 
-        Following this convention for the code flow branches, the desired code flow that any
-        change should follow (except for hotfix) is: `temp_branch > dev > test > staging > master`
+    Following this convention for the code flow branches, the desired code flow that any
+    change should follow (except for hotfix) is: `temp_branch > dev > test > staging > master`
 
-    - Temporary branches (using Bitbucket convention)
+- Temporary branches (using Bitbucket convention)
 
-        The name of a temporary branch should have the following basic structure:
-        `category/user/reference/description`
+    The name of a temporary branch should have the following basic structure:
+    `category/user/reference/description`
 
-        - Category:
-            - Feature: `feature/` -> Adding, refactoring or removing a feature
-            - Bug fix: `bugfix/` -> Fixing a bug
-            - Hot fix: `hotfix/` -> Changing code with a temporary solution directly to
-            `master` (use only in case of emergency).
-            - Experimental: `test/` -> Any new feature or idea that is not part of a
-            release or sprint
-            - Build: `build/` -> A branch specifically for creating specific build
-            artifacts or for doing code coverage runs.
-            - Release: `release/` -> A branch for tagging a specific release version.
-            - Documentation: `docs/` -> A branch for documentation.
+    - Category:
+        - Feature: `feature/` -> Adding, refactoring or removing a feature
+        - Bug fix: `bugfix/` -> Fixing a bug
+        - Hot fix: `hotfix/` -> Changing code with a temporary solution directly to
+        `master` (use only in case of emergency).
+        - Experimental: `test/` -> Any new feature or idea that is not part of a
+        release or sprint
+        - Build: `build/` -> A branch specifically for creating specific build
+        artifacts or for doing code coverage runs.
+        - Release: `release/` -> A branch for tagging a specific release version.
+        - Documentation: `docs/` -> A branch for documentation.
 
-        - User:
-            After the category, there should be a `/` followed by the initials of the
-            user that created the branch.
+    - User:
+        After the category, there should be a `/` followed by the initials of the
+        user that created the branch.
 
-        - Reference:
-	        After the user initiales, there should be a `/` followed by an optional
-	        reference of the Jira's issue/ticket you are working on. If there's
-	        no reference, just ignore it.
+    - Reference:
+     After the user initiales, there should be a `/` followed by an optional
+     reference of the Jira's issue/ticket you are working on. If there's
+     no reference, just ignore it.
 
-        - Description:
-            After the reference, there should be another `/` followed by a description
-            which sums up the purpose of this specific branch. This description should
-            be short and "kebab-cased".
+    - Description:
+        After the reference, there should be another `/` followed by a description
+        which sums up the purpose of this specific branch. This description should
+        be short and "kebab-cased".
 
-        Example:
-        ```bash
-        $ git checkout -b "feature/aao/EAIFMX-13446/extract-text-images
-        ```
-        or:
-        ```bash
-        $ git checkout -b "feature/aao/implement-ocr"
-        ```
+    Example:
+    ```bash
+    $ git checkout -b "feature/aao/EAIFMX-13446/extract-text-images"
+    ```
+    or:
+    ```bash
+    $ git checkout -b "feature/aao/implement-ocr"
+    ```
