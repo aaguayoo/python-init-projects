@@ -1,6 +1,20 @@
-def extraer_texto_txt(archivo: str) -> str:
-    texto = archivo.read()
-    return texto
+"""TXT Text Extractor
+In this fill is contened the funtion needed for extracting text from TXT file."""
 
 
-# extraer_texto_txt(open("texto_prueba_txt.txt", "r"))
+def extract_text_txt(archivo: str) -> str:
+
+    """This funtion the text from TXT file.
+    Args:
+        file(str):
+        txt file.
+    Returns:
+        str: The extracted text from txt file.
+    Raises:
+        ValueError: If fike is not a txt file.
+    """
+    try:
+        text = archivo.read()
+    except Exception:
+        raise ValueError("The file is not a TXT file.")
+    return text
