@@ -2,9 +2,9 @@
 In this fill is contened the funtion needed for extracting text from TXT file."""
 
 
-def extract_text_txt(archivo: str) -> str:
+def extract_text_txt(file: str) -> str:
 
-    """This funtion the text from TXT file.
+    """This funtion extracts the text from TXT file.
     Args:
         file(str):
         txt file.
@@ -14,7 +14,7 @@ def extract_text_txt(archivo: str) -> str:
         ValueError: If fike is not a txt file.
     """
     try:
-        text = archivo.read()
+        text = file.read()
     except Exception:
         raise ValueError("The file is not a TXT file.")
     return text
