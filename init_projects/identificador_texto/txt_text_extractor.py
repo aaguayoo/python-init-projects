@@ -3,7 +3,6 @@ In this fill is contened the funtion needed for extracting text from TXT file.""
 
 
 def extract_text_txt(file: str) -> str:
-
     """This funtion extracts the text from TXT file.
     Args:
         file(str):
