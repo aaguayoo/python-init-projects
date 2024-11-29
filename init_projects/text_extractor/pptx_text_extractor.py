@@ -5,15 +5,22 @@ from pptx import Presentation
 
 
 def extract_text_ppptx(file: str) -> str:
-    """
-    This function extracts the text from a PPTX file.
+
+    """This funtion extracts the text from PPPTX file.
+
+    The ecope of this funtion is extract text from PPPTX file.
+
     Args:
-        file (str): PPTX file.
+        arg_1(str):
+             DOCX file.
+
     Returns:
-        str: The extracted text from the PPTX file.
+        str: The extracted text from PPPTX file.
+
     Raises:
-        ValueError: If the file is not a PPTX.
+        ValueError: If fike is not a PPPTX file.
     """
+
     try:
         file = Presentation(file)
     except Exception:
@@ -25,6 +32,3 @@ def extract_text_ppptx(file: str) -> str:
             if hasattr(shape, "text"):
                 text = shape.text
     return text
-
-
-extract_text_ppptx("texto_prueba_pptx.pptx")

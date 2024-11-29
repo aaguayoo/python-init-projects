@@ -5,21 +5,25 @@ import fitz
 
 
 def extract_text_pdf(file: str) -> str:
-    """
-    This function extracts the text from a PDF file.
+
+    """This funtion extracts the text from PDF file.
+
+    The ecope of this funtion is extract text from PDF file.
+
     Args:
-        file (str): PDF file.
+        arg_1(str):
+            PDF file.
+
     Returns:
-        str: The extracted text from the PDF file.
+        str: The extracted text from PDF file.
+
     Raises:
-        ValueError: If the file is not a PDF.
+        ValueError: If fike is not a PDF file.
     """
+
     try:
-        with fitz.open(file) as doc:
-            text = ""
-            for page in doc:
-                text += page.get_text()
-            text = text.replace("�", "")
-        return text
+        doc = fitz.open(file)
     except Exception:
         raise ValueError("The file is not a valid PDF.")
+
+    return "n".join(page.get_text() for page in doc).strip()
